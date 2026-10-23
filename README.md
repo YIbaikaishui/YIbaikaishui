@@ -1,46 +1,35 @@
 # Hi，我是 YIbaikaishui 👋
 
-做前端与三维可视化，也写 Python / Rust 的工程工具。习惯把「看起来只是张效果图」的东西做成**能真的点开、真的能玩**的作品。
+主要做 **Agent 系统** 和 **网络安全工具**。喜欢把「安全能力」做成机器能直接消费的接口，而不是只给人看的报告。
 
 ---
 
-## 🏟️ 潮汐场 TIDAL ARENA
+## 🛡️ 安全 · exposur
 
-**8 万人专业足球场 · 纯前端 WebGL 三维演示**
+**面向 AI Agent 的 Web 供给面发现引擎**（Go 1.23+，MIT）
 
-[![潮汐场 TIDAL ARENA 黄昏视角](https://yibaikaishui.github.io/tidal-arena/docs/images/cover.jpg)](https://yibaikaishui.github.io/tidal-arena/)
+📦 **[github.com/YIbaikaishui/exposur](https://github.com/YIbaikaishui/exposur)**
 
-▶️ **[在线直接玩 →](https://yibaikaishui.github.io/tidal-arena/)** ｜ 📦 **[源码](https://github.com/YIbaikaishui/tidal-arena)**
+不是又一个比词表、比速度的目录扫描器——那条赛道社区已经卷了很多年。exposur 换了个角度：
 
-- **8 万座席**逐排逐区程序化生成，容量统计、疏散演练、HUD 全部读同一份数据源，不会各说各话
-- **鞍面悬浮屋盖 + 四潮八柱**，昼夜三种光照预设平滑过渡
-- 一套真能玩的任务系统：第一人称漫游 → 疏散演练 → 收集徽章 → 建筑洞察图鉴
-- **零后端、零外部资源**：three.js 与字体全部本地化，纹理全部 Canvas 程序化生成
-- **默认轻量模式**，核显也能流畅打开；加 `?full=1` 看完整泛光效果
+- 一次 `discover` 返回目标的**完整暴露画像**，而不是一堆路径列表
+- 内置约 130 条**高价值模式**（VCS 泄露 / 配置 / API 规范 / 调试台 / 备份），每条都带命中判据，宁缺毋滥
+- 每条发现输出 `severity / confidence / evidence / next_steps`——**Agent 拿到就能直接决策下一步**
+- 面向机器的输出：JSON Lines 打到 stdout，管道即用（`| jq`、直接喂给 agent）
 
-| 按键 | 作用 |
-|---|---|
-| `F` | 第一人称漫游（跟着青色光柱走，走近自动完成目标） |
-| `P` / `H` / `C` | 导览机位 / 操作说明 / 照片模式 |
-| `Shift` + `P` | 性能诊断面板（GPU、像素比、帧率、绘制量） |
+<sub>Go · 并发扫描 · JSON Lines 输出契约 · Linux / macOS / Windows</sub>
 
-<sub>three.js · 原生 ES Module + importmap · esbuild · GitHub Pages</sub>
+> 仅限**你拥有合法授权**的目标使用（授权渗透、自有资产盘点）。未授权目标一律禁止。
 
 ---
 
-## 🧩 FastAPI 工程工具链
+## 🎡 游乐场
 
-一套「CLI + 多种布局模板」的脚手架组合，`pip install fastgen-cli` 即可用。
+工作之外写着玩的东西，不揣着当作品集。
 
-| 项目 | 说明 |
-|---|---|
-| [**fastgen-cli**](https://github.com/YIbaikaishui/fastgen-cli) | 用 Rust 写的 FastAPI 模块管理器，nest-cli 风格的 `make module` |
-| [fastgen-layout-basic](https://github.com/YIbaikaishui/fastgen-layout-basic) | 最小 src 布局起步模板 |
-| [fastgen-layout-advanced](https://github.com/YIbaikaishui/fastgen-layout-advanced) | 垂直切片 + 自动维护 registry + 异步 SQLAlchemy 2.0 + Alembic |
-| [fastgen-layout-auth](https://github.com/YIbaikaishui/fastgen-layout-auth) | 带 JWT 登录注册、bcrypt 加密的起步模板 |
-
-<sub>Rust（CLI）· Python · FastAPI · SQLAlchemy 2.0 · Alembic · pytest</sub>
+- **[潮汐场 TIDAL ARENA](https://yibaikaishui.github.io/tidal-arena/)** — 8 万人专业足球场三维演示，纯前端 WebGL。
+  能第一人称漫游、做疏散演练、收集徽章。默认轻量模式，核显也打得开。
 
 ---
 
-<p align="center"><sub>📫 想聊三维可视化、WebGL 性能优化或脚手架设计，欢迎开 issue</sub></p>
+<p align="center"><sub>📫 聊 Agent 设计或安全工具，欢迎开 issue</sub></p>
